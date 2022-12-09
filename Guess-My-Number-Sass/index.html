@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600;700&family=Poppins:wght@100;300;500;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+   
+    
+    <title>Guess my Number</title>
+  </head>
+  <body>
+    <header >
+      <div class="guess">
+        <h1 class="guess__howmany">You can guess between 1 and 20</h1>
+        <button class="guess__btn pulse">Again!</button>
+        <h3 class="guess__text">Guess My Number!</h3>
+        <div class="guess__number">?</div>
+      </header>
+      <main>
+        <div class="main-sections">
+          
+          <section class="section__left">
+            <input type="number" class="section__left-number" >
+            <button class="section__left-btn ">Check!</button>
+          </section>
+          <section class="section__right">
+            <p class="section__right-message">Try to guess what number I was thinking of!</p>
+            <div class="section__right-label">
+              
+              <p class="label__text">  <img src="points.svg" alt=""> Score: 
+                <span class="label__score"> 20 </span>
+              </p>
+              
+              <p class="label__text">  <img src="winner.svg" alt=""> Highscore: 
+                <span class="label__highscore"> 20 </span>
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="index.js" ></script>
+  </body>
+</html>

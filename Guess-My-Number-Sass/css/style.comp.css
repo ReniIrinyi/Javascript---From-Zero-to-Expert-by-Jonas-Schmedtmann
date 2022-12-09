@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #fbc9da;
+  font-family: "DynaPuff", "sans-serif";
+  color: #778beb; }
+
+html {
+  margin: 1rem 2rem 1rem 2rem;
+  font-size: 62.5%; }
+
+header {
+  border-bottom: 5px solid #f8dca1;
+  border-right: none;
+  box-shadow: 0.1rem rgba(22, 26, 43, 0.2);
+  z-index: 1000; }
+
+.guess {
+  display: flex;
+  flex-direction: column; }
+  .guess__text {
+    z-index: 1000;
+    margin-top: 3rem;
+    align-self: center;
+    font-size: 5rem;
+    background-image: linear-gradient(to bottom, #a0aef1, #f8a5c2);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .guess__howmany {
+    font-size: 1rem;
+    align-self: flex-end; }
+  .guess__number {
+    z-index: 1000;
+    align-self: center;
+    color: #161a2b;
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    border-radius: 10%;
+    transform: translateY(3.5rem);
+    font-size: 3.5rem;
+    background-color: #f8dca1;
+    box-shadow: 0.1rem 0.1rem rgba(22, 26, 43, 0.2); }
+
+.pulse {
+  z-index: 1000;
+  align-self: flex-start;
+  border: none;
+  background-color: #f8dca1;
+  padding: 1rem 2rem;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4);
+  animation: pulse 2s infinite; }
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4); }
+  70% {
+    -webkit-box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4); }
+  100% {
+    -webkit-box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4); } }
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4); }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(22, 26, 43, 0);
+    box-shadow: 0 0 0 10px rgba(22, 26, 43, 0); }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(22, 26, 43, 0);
+    box-shadow: 0 0 0 0 rgba(22, 26, 43, 0); } }
+
+i {
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4);
+  position: absolute;
+  transition: all 0.2s ease-in;
+  animation: shine;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; }
+  i:after, i:before {
+    content: "";
+    background-image: linear-gradient(to left, transparent, white, transparent);
+    left: -3rem;
+    top: calc(50% - 2.5rem);
+    width: 0.5rem;
+    height: 0.3rem; }
+  i:before {
+    width: 0.1rem;
+    height: 0.1rem;
+    left: calc(50% - 1.5rem);
+    top: -10rem;
+    background-image: linear-gradient(to bottom, transparent, white, transparent); }
+
+@keyframes shine {
+  0% {
+    transform: scale(0.1) rotate(-200deg); }
+  55% {
+    transform: scale(1.2) rotate(180deg); }
+  100% {
+    transform: scale(0.1) rotate(-200deg); } }
+
+.main-sections {
+  display: grid;
+  margin: 8rem 3rem;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+
+.section__left {
+  margin-top: 3rem;
+  display: grid;
+  width: 70%;
+  justify-self: center; }
+  .section__left-number {
+    grid-row: 1/2;
+    border: none;
+    align-self: flex-start;
+    border: none;
+    background-color: #f8dca1;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4);
+    border-bottom: 3px solid transparent; }
+    .section__left-number:focus {
+      outline: none;
+      box-shadow: 0 0 0.02rem 0.05rem rgba(213, 61, 183, 0.4);
+      border-bottom: 2px solid #f8a5c2; }
+    .section__left-number:focus:invalid {
+      border-bottom: 2px solid #161a2b; }
+    .section__left-number:focus-visible {
+      outline-offset: 0px; }
+  .section__left-btn {
+    cursor: pointer;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-start;
+    border: none;
+    background-color: #f8dca1;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    margin-bottom: 10%;
+    box-shadow: 0 0 0.02rem 0.05rem rgba(255, 255, 255, 0.4); }
+
+.section__right-message {
+  font-size: 2rem;
+  align-content: center;
+  background-image: linear-gradient(to top, #a0aef1, #f8a5c2);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.section__right-label {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 3rem 3rem;
+  justify-content: start;
+  align-content: center; }
+  .section__right-label p {
+    color: #778beb;
+    font-size: 1.6rem; }
+  .section__right-label span {
+    margin-left: 1rem;
+    font-size: 1.8rem; }
+  .section__right-label img {
+    height: 1.5rem;
+    margin-right: 1rem; }
